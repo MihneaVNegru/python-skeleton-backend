@@ -6,8 +6,8 @@ from sqlalchemy.orm import Session
 from core.config import settings
 from core.database import get_db
 from models.user import User
-from services import user_service
 from schemas.user import TokenData
+from services import user_service
 
 # This tells FastAPI that we use the /api/auth/login endpoint to get tokens
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="api/auth/login")

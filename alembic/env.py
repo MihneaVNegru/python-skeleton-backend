@@ -1,17 +1,12 @@
-import os
-import sys
 from logging.config import fileConfig
 
-from sqlalchemy import engine_from_config
-from sqlalchemy import pool
+from sqlalchemy import engine_from_config, pool
 
 from alembic import context
+from core.config import settings
 
 # 1. Import your Base and Models here for autogenerate support
 from core.database import Base
-from core.config import settings
-from models.item import Item
-from models.user import User
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
